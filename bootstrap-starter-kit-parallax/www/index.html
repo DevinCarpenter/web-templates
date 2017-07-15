@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/font-awesome-4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/normalize.css">
+    <script src='js/jquery-3.2.0.min.js'></script>
+    <script src='js/bootstrap.js'></script>
+    <script src='js/main.js'></script>
+    <script src="js/jquery.easing.min.js"></script>
+    <script src="js/wow.min.js"></script>
+    <script type="text/javascript">
+      "use strict"; // Start of use strict
+      $("document").ready(function(){
+        (function($) {
+            // jQuery for page scrolling feature - requires jQuery Easing plugin
+            $('a.page-scroll').bind('click', function(event) {
+                var $anchor = $(this); //Gets the element from the DOM that was clicked
+                $('html, body').stop().animate({ // Stop prior animations 
+                    scrollTop: ($($anchor.attr('href')).offset().top - 50) // Scroll to the href of the anchor that was clicked
+                }, 1250, 'easeInOutExpo');
+                event.preventDefault();
+            });
+
+            // Highlight the top nav as scrolling occurs
+            // $('body').scrollspy({
+            //     target: '.navbar-fixed-top',
+            //     offset: 51
+            // });
+
+            // Closes the Responsive Menu on Menu Item Click
+            // $('.navbar-collapse ul li a').click(function() {
+            //     $('.navbar-toggle:visible').click();
+            // });
+
+            // Fit Text Plugin for Main Header
+            // $("h1").fitText(
+            //     1.2, {
+            //         minFontSize: '35px',
+            //         maxFontSize: '65px'
+            //     }
+            // );
+
+            // Offset for Main Navigation
+            // $('#mainNav').affix({
+            //     offset: {
+            //         top: 100
+            //     }
+            // });
+
+            // Initialize WOW.js Scrolling Animations
+            //new WOW().init();
+
+        })(jQuery); // End of use strict
+      });
+    </script>
+    <title>Your Page Title Here</title>
+  </head>
+  <body id="top">
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="index.html">Project Name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="index.html">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="jumbotron parallax">
+      <div id="titleContainer">
+        <h1 id="hero-main-message">My Project Name</h1>
+        <h3 id="hero-sub-message">My Project - Just use it!</h3>
+      </div>
+      <a class="btn btn-primary btn-lg page-scroll" href="#main-content" role="button">Tell me more</a>
+    </div>
+    <div class="mainContainer">
+      <!-- Main Code Here -->
+      <div id="main-content">
+        <div class="sectionOneMessage">
+          <h2 id="mainQuestion">Ready for an adventure?</h2>
+          <h1 id="mainReason">Climb aboard and we'll take you to lands like you've never seen!</h1>
+        </div>
+        <p><a class="btn btn-primary btn-lg page-scroll" id="hero-btn" href="#top" role="button">How to Start</a></p>
+
+      </div>
+      <div class="socialContainer">
+        <section class="social-header"><h4>Come check us out on social!</h4></section>
+        <hr>
+
+        <section class="social-group">
+          <a href="https://www.facebook.com/" target="_blank">
+            <button type="button" class="btn btn-primary social-btn">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </button>
+          </a>
+          <a href="https://twitter.com/" target="_blank">
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </button>
+          </a>
+          <a href="https://www.flickr.com/" target="_blank">
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-flickr" aria-hidden="true"></i>
+            </button>
+          </a>
+          <a href="https://www.youtube.com/" target="_blank">
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-youtube-play" aria-hidden="true"></i>
+            </button>
+          </a>
+          <a href="https://www.pinterest.com/" target="_blank">
+            <button type="button" href="" class="btn btn-primary">
+              <i class="fa fa-pinterest-p" aria-hidden="true"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/" target="_blank">
+            <button type="button" class="btn btn-primary">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </button>
+          </a>
+        </section>
+        <section class="main-footer">
+          <footer>All Rights Reserved - <wbr>Copyright 2017 - <wbr>Project Name</footer>
+        </section>
+      </div>
+    </div>
+  </body>
+</html>
+<style type="text/css">
+  /*CSS for Screens smaller than 500px*/
+  @media only screen and (max-device-width: 500px) {
+      .parallax {
+          background-attachment: scroll;
+      }
+      body, html {
+          height: 100%;
+          font-size: 18px;
+      }
+      body{
+        min-height: 100%;
+      }
+      #hero-main-message{
+        margin: 32px 16px 16px 16px;
+        color:#fff;
+        text-decoration: underline;
+      }
+      #hero-sub-message{
+        margin: 32px 32px 32px 32px;
+        color:#fff;
+      }
+      #hero-btn{
+        margin: 32px 32px 32px 32px;
+      }
+      #titleContainer{
+        display: flex;
+        flex-direction: column;
+      }
+      #titleContainer h1{
+        font-size: 2rem;
+        margin: auto;
+      }
+      #titleContainer h3{
+        font-size: 1rem;
+        text-align: center;
+        margin: initial auto initial auto;
+      }
+      .mainContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      #main-content{
+        text-align: center;
+        font-size:2rem;
+        margin: initial 8px initial 8px;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #main-content h1{
+        font-size: 2rem;
+        margin: 2rem;
+        max-width: 650px;
+      }
+      #main-content h2{
+        font-size: 1.5rem;
+        margin: 2rem 16px 16px 16px;
+      }
+      .socialContainer{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        background-color: #333;
+        flex: 0 0 auto;
+      }
+      .socialContainer hr{
+        background-color: #000;
+        margin:0px;
+        height: 0px;
+        padding: 1px 0 0px 0;
+        border:0;
+        z-index: 1;
+      }
+      .social-header{
+        background-color:#333;
+        color: #fff;
+        height: auto;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items:center;
+      }
+      .social-group{
+        background-color:#333;
+        min-height:60px;
+        max-width: 500px;
+        display: flex;
+        flex: 0 0 auto;
+        align-items:center;
+        justify-content:space-around;
+      }
+      .main-footer{
+        display:inline-block;
+        white-space:nowrap;
+        background-color:#333;
+        color:#fff;
+        height: auto;
+        width: 100%;
+        padding: 3px 0 3px 0;
+        text-align: center;
+        font-size: .5rem;
+      }
+      #mainReason{
+        font-weight: bold;
+      }
+      .parallax{
+        background-image: url("img/summer-2391348_1920.jpg");
+
+        /* Set a specific height */
+        height: 100%; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .btn-primary:hover{
+        background-color: #337ab7;
+        border-color: #2e6da4;
+      }
+  }
+  /*CSS for between 500px and 900px*/
+  @media only screen and (min-device-width: 500px) and (max-device-width: 900px) {
+      .parallax {
+          background-attachment: scroll;
+      }
+      body, html {
+          height: 100%;
+          font-size: 24px;
+      }
+      body{
+        min-height: 100%;
+      }
+      #hero-main-message{
+        margin: 32px 16px 16px 16px;
+        color:#fff;
+        text-decoration: underline;
+      }
+      #hero-sub-message{
+        margin: 32px 32px 32px 32px;
+        color:#fff;
+      }
+      #hero-btn{
+        margin: 32px 32px 32px 32px;
+      }
+      #titleContainer{
+        display: flex;
+        flex-direction: column;
+      }
+      #titleContainer h1{
+        font-size: 2rem;
+        margin-left: 0px;
+      }
+      #titleContainer h3{
+        font-size: 1.1rem;
+        text-align: center;
+        margin-left: 0px;
+      }
+      #main-content{
+        text-align: center;
+        font-size:2rem;
+        margin: initial 8px initial 8px;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #main-content h1{
+        font-size: 2rem;
+        margin: 2rem;
+        max-width: 650px;
+      }
+      #main-content h2{
+        font-size: 1.5rem;
+        margin: 1rem 16px 16px 16px;
+      }
+      .socialContainer{
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        align-items: center;
+        flex: 0 0 auto;
+        font-size: 1.5rem;
+      }
+      .socialContainer hr{
+        background-color: #000;
+        margin:0px;
+        height: 0px;
+        width: 100%;
+        padding: 1px 0 0px 0;
+        border:0;
+        z-index: 1;
+      }
+      .social-header{
+        background-color:#333;
+        color: #fff;
+        height: auto;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items:center;
+      }
+      .social-group{
+        background-color:#333;
+        min-height:60px;
+        width: 500px;
+        display: flex;
+        flex: 0 0 auto;
+        align-items:center;
+        justify-content:space-around;
+      }
+      .main-footer{
+        display:inline-block;
+        white-space:nowrap;
+        background-color:#333;
+        color:#fff;
+        height: auto;
+        width: 100%;
+        padding: 3px 0 3px 0;
+        text-align: center;
+      }
+      #mainReason{
+        font-weight: bold;
+      }
+      .parallax{
+        background-image: url("img/summer-2391348_1920.jpg");
+
+        /* Set a specific height */
+        height: 100%; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .btn-primary:hover{
+        background-color: #337ab7;
+        border-color: #2e6da4;
+      }
+  }
+  /*CSS for larger than 900px*/
+   @media only screen and (min-device-width: 901px) {
+      .parallax {
+          background-attachment: scroll;
+      }
+      body, html {
+          height: 100%;
+          font-size: 28px;
+      }
+      body{
+        min-height: 100%;
+      }
+      #hero-main-message{
+        margin: 32px 16px 16px 16px;
+        color:#fff;
+        text-decoration: underline;
+      }
+      #hero-sub-message{
+        margin: 32px 32px 32px 32px;
+        color:#fff;
+      }
+      #hero-btn{
+        margin: 32px 32px 32px 32px;
+      }
+      #titleContainer{
+        display: flex;
+        flex-direction: column;
+      }
+      #titleContainer h1{
+        font-size: 4rem;
+        margin-left: 0px;
+      }
+      #titleContainer h3{
+        font-size: 2rem;
+        text-align: center;
+        margin-left: 0px;
+      }
+      #main-content{
+        text-align: center;
+        font-size:2rem;
+        margin: initial 8px initial 8px;
+        height:100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      #main-content h1{
+        font-size: 3rem;
+        margin: 2rem;
+        /*max-width: 650px;*/
+      }
+      #main-content h2{
+        font-size: 2rem;
+        margin: 1rem 16px 16px 16px;
+      }
+      .socialContainer{
+        display: flex;
+        flex-direction: column;
+        background-color: #333;
+        align-items: center;
+        flex: 0 0 auto;
+      }
+      .socialContainer hr{
+        background-color: #000;
+        margin:0;
+        width: 100%;
+        padding: 1px 0 0px 0;
+        border:0;
+      }
+      .social-header{
+        color: #fff;
+        height: auto;
+        display: flex;
+        flex: 0 0 auto;
+        justify-content: center;
+        align-items:center;
+      }
+      .social-group{
+        min-height:60px;
+        width: 500px;
+        display: flex;
+        flex: 0 0 auto;
+        align-items:center;
+        justify-content:space-around;
+      }
+      .main-footer{
+        display:inline-block;
+        white-space:nowrap;
+        color:#fff;
+        font-size: .5rem;
+        width: 100%;
+        padding: 3px 0 3px 0;
+        text-align: center;
+      }
+      #mainReason{
+        font-weight: bold;
+      }
+      .parallax{
+        background-image: url("img/summer-2391348_1920.jpg");
+
+        /* Set a specific height */
+        height: 100%; 
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      
+      
+  }
+    /*Turn off parallax when on mobile and device is smaller than 1024 pixels*/
+    /*@media only screen and (max-device-width: 1024px) {
+        .parallax {
+            background-attachment: scroll;
+        }
+    }*/
+</style>
